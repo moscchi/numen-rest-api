@@ -44,7 +44,7 @@ app.get('/', (_, res) => res.send('Servidor para testeo de Postman'));
 //¿Qué se imaginan que pasa aca?
 app.use('/api', validateToken, routes);
 
-//Defino las rutas
+//Defino las rutas de los métodos del CRUD
 routes.get('/students', (_, res) => {
     res.status(200).json(students);
 });

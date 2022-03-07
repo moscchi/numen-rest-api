@@ -1,2 +1,6 @@
 # numen-rest-api
-Una API Rest destinada a un tutorial de Postman.
+
+
+##### Este repositorio alberga un backend con un CRUD que persiste un array en memoria simulando una base de datos.
+
+> Destinado a una clase guía sobre Postman

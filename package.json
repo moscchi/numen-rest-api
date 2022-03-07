@@ -1,0 +1,28 @@
+{
+  "name": "numen-rest-api",
+  "version": "1.0.0",
+  "description": "Una API Rest destinada a un tutorial de Postman.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moscchi/numen-rest-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moscchi/numen-rest-api/issues"
+  },
+  "homepage": "https://github.com/moscchi/numen-rest-api#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15"
+  }
+}

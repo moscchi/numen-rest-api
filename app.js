@@ -45,21 +45,27 @@ app.get('/', (_, res) => res.send('Servidor para testeo de Postman'));
 app.use('/api', validateToken, routes);
 
 //Defino las rutas de los métodos del CRUD
+
+//Obtener TODOS los datos del array students
 routes.get('/students', (_, res) => {
     res.status(200).json(students);
 });
 
+
+//Obtener student by id
 routes.get('/student/:id', (req, res) => {
     const student = students.filter(a => a.id === Number(req.params.id));
     student.length > 0 ? res.status(200).json(student) : res.status(404).json({error_message: "The id does not exist"});
 });
 
+//Actualizar student by id
 routes.put('/student/:id', (req, res) => {
     const student = students.filter(a => a.id === Number(req.params.id));
     students[student[0].id-1] = {id: student[0].id, name: req.body.name, lastname: req.body.lastname};
     student.length > 0 ? res.status(200).json(students[student[0].id-1]) : res.status(404).json({error_message: "The id does not exist"})
 });
 
+//Ingresar nuevo student
 routes.post('/student', (req, res) => {
     try{
         const idStudent = students[students.length-1].id+1
@@ -70,6 +76,8 @@ routes.post('/student', (req, res) => {
     }
 })
 
+
+//Eliminar student by id
 routes.delete('/student/:id', (req, res) => {
     const deleteStudents = students.filter(student => student.id != req.params.id);
     students = deleteStudents;
